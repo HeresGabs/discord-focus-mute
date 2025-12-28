@@ -46,7 +46,7 @@ You should see this message after it finished : `API Server ready on : http://lo
 Feel free to use your own domain name 😉
 
 ## Coming Soon :
-
+- Ability to unmute
 - Multiple endpoints for multiple focus modes
 - Mute DMs
 - WebUI to make setup easier than with a text file, and make the success response prettier
