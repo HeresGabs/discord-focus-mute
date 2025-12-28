@@ -1,6 +1,6 @@
 # Discord-focus-mute
 
-Mute specific discord servers by calling a single self-hosted API endpoint using docker.
+Mute specific discord servers by calling a single self-hosted API endpoint using node (expressjs) .
 
 ## **Disclaimer**
 
