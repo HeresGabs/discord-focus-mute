@@ -4,14 +4,10 @@ This lightweight, Dockerized API allows you to automatically mute and unmute spe
 Designed to bridge the gap between Discord and automation tools like Apple Shortcuts, it lets you trigger complex notification settings with a simple HTTP request.
 
 ## Key Features
-
-    - Dockerized: Easy to deploy on any VPS or home server.
-
-    - Apple Ecosystem Ready: Perfect for triggering via iOS Automations when turning on a Focus Mode.
-
-    - Smart Toggling: Automatically handles both /mute and /unmute actions from a single configuration file.
-
-    - File-Based Config: Simply drop a text file with your request logs to create a new mode—no complex database required.
+- **Dockerized** : Easy to deploy on any VPS or home server.
+- **Apple Ecosystem Ready** : Perfect for triggering via iOS Automations when turning on a Focus Mode.
+- **Smart Toggling** : Automatically handles both /mute and /unmute actions from a single configuration file.
+- **File-Based Config** : Simply drop a text file with your request logs to create a new mode—no complex database required.
 
 ## **Disclaimer**
 
