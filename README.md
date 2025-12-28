@@ -25,7 +25,7 @@ I, the developer, am not responsible for any consequences that may arise from th
     - Go to the Network tab
     - Manually mute a server in Discord
     - Find the PATCH request that appears in the Network tab
-    - Copy the entire fetch request and paste it into `YOUR_FOCUS_MODE.txt`
+    - Copy the entire fetch request and paste it into `focus-modes/YOUR_FOCUS_MODE.txt`
       (right-click Copy Value > Copy as Fetch on Firefox)
     - Repeat for each server you want to mute (you only need to do this setup once)
 
