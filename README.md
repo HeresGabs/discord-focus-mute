@@ -17,7 +17,7 @@ I, the developer, am not responsible for any consequences that may arise from th
 
 ## Installation with docker
 
-1. Clone the repo
+1. Clone the repo and cd into the folder
 2. For each focus mode you want to create, create a file in the `focus-modes` folder with the name of your choice and the `.txt` extension (eg. `work.txt`, `study.txt`).
    Each file must contain the list of PATCH requests to mute the servers you want to mute when you call the endpoint.
    Here's how to get your PATCH requests from Discord:
@@ -31,13 +31,13 @@ I, the developer, am not responsible for any consequences that may arise from th
 
    ⚠️ CAREFUL ! Those requests contain your user token, it is very important not to share them with ANYONE.
 
-3. On your server, execute this command to build the dockerfile :
+3. Still on the repo folder, execute this command to build the dockerfile :
 
 ```bash
  docker build -t discord-focus-mute .
 ```
 
-4. On your server, execute this command to launch the container :
+4. Then, execute this command to launch the container :
 
 ```bash
  docker run --rm -p 3000:3000 -v "$(pwd)/focus-modes":/app/focus-modes discord-focus-mute
