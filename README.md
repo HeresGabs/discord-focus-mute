@@ -55,6 +55,7 @@ Feel free to use your own domain name 😉
 5. Repeat for each focus mode
 
 And that's it ! When you'll change your focus mode, it'll mute/unmute your servers !
+You can customize it so it can send you a confirmation notification...
 
 ## Coming Soon :
 - Mute DMs
