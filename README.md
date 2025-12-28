@@ -40,7 +40,7 @@ I, the developer, am not responsible for any consequences that may arise from th
 4. On your server, execute this command to launch the container :
 
 ```bash
- docker run -d --rm -p 3000:3000 -v "$(pwd)/focus-modes":/app/focus-modes discord-focus-mute
+ docker run --rm -p 3000:3000 -v "$(pwd)/focus-modes":/app/focus-modes discord-focus-mute
 ```
 5. You can now call the endpoint to mute the servers listed in `YOUR_FOCUS_MODE.txt` by going to `http://localhost:3000/YOUR_FOCUS_MODE/mute` or `/unmute`
 
