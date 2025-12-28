@@ -1,6 +1,17 @@
 # Discord-focus-mute
+This lightweight, Dockerized API allows you to automatically mute and unmute specific batches of Discord servers based on custom "Focus Modes" (Work, Gaming, Study...).
 
-Mute specific discord servers by calling a single self-hosted API endpoint using node (expressjs) .
+Designed to bridge the gap between Discord and automation tools like Apple Shortcuts, it lets you trigger complex notification settings with a simple HTTP request.
+
+## Key Features
+
+    - Dockerized: Easy to deploy on any VPS or home server.
+
+    - Apple Ecosystem Ready: Perfect for triggering via iOS Automations when turning on a Focus Mode.
+
+    - Smart Toggling: Automatically handles both /mute and /unmute actions from a single configuration file.
+
+    - File-Based Config: Simply drop a text file with your request logs to create a new mode—no complex database required.
 
 ## **Disclaimer**
 
@@ -8,8 +19,6 @@ By using this code, you are automating your Discord Account. This is against Dis
 I, the developer, am not responsible for any consequences that may arise from the use of this code. Use this software at your own risk and responsibility. Learn more about [Discord's Terms of Service](https://discord.com/terms) and [Community Guidelines](https://discord.com/guidelines).
 
 **This repository is in no way affiliated with, authorized, maintained, sponsored, or endorsed by Discord Inc. (discord.com) or any of its affiliates or subsidiaries.**
-
-## **Warning**
 
 **DO NOT GIVE YOUR DISCORD TOKENS TO ANYONE.**
 
