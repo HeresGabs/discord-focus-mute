@@ -18,16 +18,18 @@ I, the developer, am not responsible for any consequences that may arise from th
 ## Installation with docker
 
 1. Clone the repo
-2. Edit the `server_requests_list.txt` file by capturing the PATCH requests from Discord:
+2. For each focus mode you want to create, create a file in the `focus-modes` folder with the name of your choice and the `.txt` extension (eg. `work.txt`, `study.txt`).
+   Each file must contain the list of PATCH requests to mute the servers you want to mute when you call the endpoint.
+   Here's how to get your PATCH requests from Discord:
     - Open Discord in your browser and open Developer Tools (F12)
     - Go to the Network tab
     - Manually mute a server in Discord
     - Find the PATCH request that appears in the Network tab
-    - Copy the entire fetch request and paste it into `server_requests_list.txt`
+    - Copy the entire fetch request and paste it into `YOUR_FOCUS_MODE.txt`
       (right-click Copy Value > Copy as Fetch on Firefox)
     - Repeat for each server you want to mute (you only need to do this setup once)
 
-   ⚠️ CAREFUL ! Those requests contains your user token, it is very important not to share them with ANYONE.
+   ⚠️ CAREFUL ! Those requests contain your user token, it is very important not to share them with ANYONE.
 
 3. On your server, execute this command to build the dockerfile :
 
@@ -35,18 +37,15 @@ I, the developer, am not responsible for any consequences that may arise from th
  docker build -t discord-focus-mute .
 ```
 
-1. On your server, execute this command to launch the container :
+4. On your server, execute this command to launch the container :
 
 ```bash
- docker run --rm -p 3000:3000 -v "$(pwd)/server_requests_list.txt":/app/data/server_requests_list.txt discord-focus-mute
+ docker run -d --rm -p 3000:3000 -v "$(pwd)/focus-modes":/app/focus-modes discord-focus-mute
 ```
-
-You should see this message after it finished : `API Server ready on : http://localhost:3000/start`
+5. You can now call the endpoint to mute the servers listed in `YOUR_FOCUS_MODE.txt` by going to `http://localhost:3000/YOUR_FOCUS_MODE/mute` or `/unmute`
 
 Feel free to use your own domain name 😉
 
 ## Coming Soon :
-- Ability to unmute
-- Multiple endpoints for multiple focus modes
 - Mute DMs
 - WebUI to make setup easier than with a text file, and make the success response prettier
