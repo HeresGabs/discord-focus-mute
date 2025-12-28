@@ -46,6 +46,16 @@ I, the developer, am not responsible for any consequences that may arise from th
 
 Feel free to use your own domain name 😉
 
+## Use it with Apple Shortcuts
+
+1. Go to the `automations` tab
+2. Select your focus mode and select "When turning On/Off" based on your need.
+3. Select "Create a new empty automation"
+4. In the search bar type "Get contents of URL" and paste your API url (with the focus mode and the mute/unmute) in the `URL` field.
+5. Repeat for each focus mode
+
+And that's it ! When you'll change your focus mode, it'll mute/unmute your servers !
+
 ## Coming Soon :
 - Mute DMs
 - WebUI to make setup easier than with a text file, and make the success response prettier
