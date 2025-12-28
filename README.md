@@ -58,5 +58,6 @@ And that's it ! When you'll change your focus mode, it'll mute/unmute your serve
 You can customize it so it can send you a confirmation notification...
 
 ## Coming Soon :
+- Mute specific channels
 - Mute DMs
 - WebUI to make setup easier than with a text file, and make the success response prettier
