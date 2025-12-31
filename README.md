@@ -47,7 +47,13 @@ I, the developer, am not responsible for any consequences that may arise from th
 ```bash
  docker run --rm -p 3000:3000 -v "$(pwd)/focus-modes":/app/focus-modes discord-focus-mute
 ```
-5. You can now call the endpoint to mute the servers listed in `YOUR_FOCUS_MODE.txt` by going to `http://localhost:3000/YOUR_FOCUS_MODE/mute` or `/unmute`
+
+5. The server checks a secret key passed as a query parameter (`?key=...`) to authorize actions and avoid bots. Create a .env file in the root of the project with the following content :
+    ```env
+   SECRET_KEY=your_secret_key_here
+   ```
+7. Restart the docker container to take into account the .env file
+8. You can now call the endpoint to mute the servers listed in `YOUR_FOCUS_MODE.txt` by going to `http://localhost:3000/YOUR_FOCUS_MODE/mute?key=your_secret_key` or `/unmute`
 
 Feel free to use your own domain name 😉
 
