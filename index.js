@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const PORT = 3000; //Make sure to update your Dockerfile accordingly
-const SECRET_KEY = "123"; // CHANGE THIS
+const SECRET_KEY = process.env.SECRET_KEY; //CHANGE THIS IN YOUR ENV FILE
 
 const MODES_DIR = path.join(__dirname, 'focus-modes');
 let isRunning = false;
