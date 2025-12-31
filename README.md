@@ -49,7 +49,7 @@ I, the developer, am not responsible for any consequences that may arise from th
 ```
 
 5. The server checks a secret key passed as a query parameter (`?key=...`) to authorize actions and avoid bots. Create a .env file in the root of the project with the following content :
-6. ```env
+    ```env
    SECRET_KEY=your_secret_key_here
    ```
 7. Restart the docker container to take into account the .env file
