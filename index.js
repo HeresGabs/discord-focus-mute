@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const PORT = 3000; //Make sure to update your Dockerfile accordingly
+const SECRET_KEY = "123"; // CHANGE THIS
 
 const MODES_DIR = path.join(__dirname, 'focus-modes');
 let isRunning = false;
@@ -89,6 +90,22 @@ if (!fs.existsSync(MODES_DIR)) {
 }
 
 const files = fs.readdirSync(MODES_DIR).filter(file => file.endsWith('.txt'));
+
+app.use((req, res, next) => {
+    if (req.path === '/') return next();
+
+    const userKey = req.query.key;
+
+    if (userKey !== SECRET_KEY) {
+        console.warn(`🛑 Refused attempt to access a route : ${req.ip}`);
+        return res.status(401).json({
+            status: 'error',
+            message: 'Missing secret key.'
+        });
+    }
+
+    next();
+});
 
 console.log("GENERATING ENDPOINTS");
 
